@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rahul Shah - Portfolio</title>
     <style>
+        /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
         }
-    
+
+        /* General body styles */
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
@@ -16,20 +18,26 @@
             padding: 0;
             background-color: #f5f9fd; /* Light bluish background */
         }
-    
+
+        /* Header styles */
         header {
-            background-color: #3f72af; /* Darker blue for header */
+            background-image: url('Image/RAHUL.png');
+            background-size: cover;
+            background-position: center;
             color: #fff;
             text-align: center;
             padding: 10px;
+            position: relative;
+            height: 400px;
         }
-    
+
+        /* Navbar styles */
         nav {
             background-color: #eaf2ff; /* Lighter blue for navigation */
             padding: 10px;
             text-align: center;
         }
-    
+
         nav a {
             text-decoration: none;
             margin: 0 15px;
@@ -37,37 +45,84 @@
             font-weight: bold;
             font-size: 16px;
         }
-    
+
+        /* Section styles */
         section {
             padding: 20px;
             border-bottom: 1px solid #ccc;
             background-color: #fff; /* White background for sections */
             border-radius: 10px; /* Rounded corners */
-            margin-bottom: 20px; /* Add some space between sections */
+            margin-bottom: 20px; /* Add space between sections */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
         }
-    
+
+        /* Footer styles */
         footer {
             text-align: center;
             padding: 10px;
             background-color: #3f72af; /* Darker blue for footer */
             color: #fff;
         }
+
+        /* Profile image animation styles */
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .profile-img {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin-right: 20px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            animation: rotate-images 10s infinite alternate ease-in-out;
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* Rotating images animation */
+        @keyframes rotate-images {
+            0% {
+                transform: rotateY(0deg);
+            }
+            50% {
+                transform: rotateY(180deg);
+            }
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
     </style>
-
-
 </head>
 <body>
-    <header style="background-image: url('Image/RAHUL.png'); background-size: cover; background-position: left; color: #fff; padding: 20px; text-align: left;">
-        <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
-            <div style="margin-right: 20px;">
-                <img src="Image/Personal.jpg" alt="Rahul Shah" style="border-radius: 50%; width: 300px; height: 300px; object-fit: cover; border: 3px solid #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);">
+    <header>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="profile-container">
+            <div class="profile-img">
+                <img src="Image/Personal.jpg" alt="Rahul Shah">
             </div>
-        </div>
-        <div style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">
-            <h1 style="margin-top: 10px; font-size: 32px;">Rahul Kumar Shah</h1>
-            <h2 style="margin: 5px 0; font-size: 24px; color: #f8f9fa;">Research Scientist</h2>
-            <p style="margin: 5px 0; font-size: 18px;">Perrysburg, OH | (575) 339-7948 | rahul.shah12@gmail.com | <a href="https://linkedin.com/in/rahul-shah12k" target="_blank" style="color: #fff; text-decoration: none;">linkedin.com/in/rahul-shah12k</a></p>
+            <div class="profile-info">
+                <h1>Rahul Kumar Shah</h1>
+                <h2>Research Scientist</h2>
+                <p>Perrysburg, OH | (575) 339-7948 | rahul.shah12@gmail.com | <a href="https://linkedin.com/in/rahul-shah12k" target="_blank">linkedin.com/in/rahul-shah12k</a></p>
+            </div>
         </div>
     </header>
 
