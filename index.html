@@ -224,6 +224,19 @@
         .award-card h4 { font-size: 1rem; color: var(--text-primary); margin-bottom: 6px; }
         .award-card p { color: var(--text-muted); font-size: 0.88rem; }
         .award-icon { color: var(--accent); font-size: 1.4rem; margin-bottom: 12px; }
+        .curious-minds-header { text-align: center; margin-bottom: 36px; }
+        .curious-minds-header .cm-brand { font-size: 1.8rem; font-weight: 700; color: var(--accent); font-family: var(--font-heading); }
+        .curious-minds-header p { color: var(--text-secondary); font-size: 1.05rem; margin-top: 8px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cm-stats { display: flex; justify-content: center; gap: 32px; margin-bottom: 36px; flex-wrap: wrap; }
+        .cm-stat-card { text-align: center; min-width: 160px; }
+        .cm-stat-card .glass-card { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 24px 32px; }
+        .cm-stat-card i { font-size: 1.8rem; }
+        .cm-stat-card .cm-count { font-family: var(--font-heading); font-size: 1.6rem; font-weight: 700; color: var(--accent); }
+        .cm-stat-card .cm-platform { font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+        .cm-topics { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+        .cm-topic { padding: 10px 22px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 50px; font-size: 0.9rem; color: var(--text-secondary); transition: all var(--transition); cursor: default; }
+        .cm-topic:hover { border-color: var(--accent); color: var(--accent); box-shadow: 0 0 16px var(--accent-glow); transform: translateY(-2px); }
+        .fa-x-twitter { font-weight: 900; }
         .fun-fact-content { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
         .fun-fact-content i { font-size: 2rem; color: var(--accent); }
         .fun-fact-content p { color: var(--text-secondary); font-size: 1.1rem; flex: 1; min-width: 200px; }
@@ -294,6 +307,7 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#awards">Awards</a></li>
+                <li><a href="#curious-minds">Curious Minds</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div style="display:flex;align-items:center;gap:8px;">
@@ -318,6 +332,7 @@
             </div>
             <h1>Rahul Kumar Shah</h1>
             <p class="hero-subtitle">Research Scientist</p>
+            <p class="hero-quote" style="font-style:italic;color:var(--text-secondary);font-size:1.05rem;max-width:600px;margin:0 auto 20px;opacity:0.85;">"The people who are crazy enough to think they can change the world are the ones who do." <span style="font-style:normal;color:var(--text-muted);font-size:0.9rem;">&mdash; Steve Jobs</span></p>
             <p class="hero-contact">Perrysburg, OH &nbsp;|&nbsp; (575) 339-7948 &nbsp;|&nbsp; rahul.shah12k@gmail.com &nbsp;|&nbsp; <a href="https://linkedin.com/in/rahul-shah12k" target="_blank">LinkedIn</a></p>
             <a href="#contact" class="hero-cta">Get in Touch</a>
             <div class="hero-stats">
@@ -577,8 +592,46 @@
             <div class="glass-card reveal-scale">
                 <div class="fun-fact-content">
                     <i class="fas fa-gamepad"></i>
-                    <p>Love to play Badminton and Tennis. Currently reading "Practical Optimism". Travelling and Photography.</p>
+                    <p>Love to play Pickleball, Badminton, and Tennis. Currently reading "Steve Jobs" by Walter Isaacson. Travelling and Photography.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="curious-minds">
+        <div class="container">
+            <h2 class="section-title reveal">Curious Minds</h2>
+            <div class="curious-minds-header reveal">
+                <p>Beyond engineering, I create content on success mindset, productivity, book lessons, growth mindset, and leadership -- helping others build a life of purpose and impact.</p>
+            </div>
+            <div class="cm-stats stagger-children">
+                <div class="cm-stat-card">
+                    <div class="glass-card">
+                        <i class="fab fa-x-twitter" style="color:var(--text-primary);"></i>
+                        <div class="cm-count" data-count="90">0</div>
+                        <div class="cm-platform">K Followers on X</div>
+                    </div>
+                </div>
+                <div class="cm-stat-card">
+                    <div class="glass-card">
+                        <i class="fab fa-threads" style="color:var(--text-primary);"></i>
+                        <div class="cm-count" data-count="135">0</div>
+                        <div class="cm-platform">K Followers on Threads</div>
+                    </div>
+                </div>
+                <div class="cm-stat-card">
+                    <div class="glass-card">
+                        <i class="fas fa-users" style="color:var(--accent);"></i>
+                        <div class="cm-count" data-count="225">0</div>
+                        <div class="cm-platform">K+ Total Community</div>
+                    </div>
+                </div>
+            </div>
+            <div class="cm-topics stagger-children reveal" style="margin-top:8px;">
+                <span class="cm-topic"><i class="fas fa-bullseye"></i> Success Mindset</span>
+                <span class="cm-topic"><i class="fas fa-rocket"></i> Productivity</span>
+                <span class="cm-topic"><i class="fas fa-book"></i> Book Lessons</span>
+                <span class="cm-topic"><i class="fas fa-seedling"></i> Growth Mindset</span>
+                <span class="cm-topic"><i class="fas fa-chess-king"></i> Leadership</span>
             </div>
         </div>
     </section>
@@ -597,6 +650,8 @@
             <p class="footer-text">I am driven by the belief that image processing technology can shape a better future, and I am eager to collaborate with like-minded professionals and organizations to bring about meaningful change. Let's connect and explore how my skills and passion can contribute to transformative projects.</p>
             <div class="footer-social">
                 <a href="https://linkedin.com/in/rahul-shah12k" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/CuriousMindsHub" target="_blank" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.threads.com/@curiousmindshub_?xmt=AQGzfxEz-EkL-9uG4l5qqXLo_AjJ5f6THkGjxs7a8RzewSc" target="_blank" aria-label="Threads"><i class="fab fa-threads"></i></a>
                 <a href="mailto:rahul.shah12k@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
             <p class="footer-copy">&copy; 2025 Rahul Kumar Shah. All rights reserved.</p>
@@ -621,9 +676,15 @@
         var reveals=document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale,.stagger-children');
         var ro=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting)en.target.classList.add('visible');});},{threshold:0.12});
         reveals.forEach(function(el){ro.observe(el);});
+        function animateCounters(els,suffix){
+            els.forEach(function(c){var t=parseInt(c.getAttribute('data-count'),10),cur=0,step=Math.max(1,Math.floor(t/40));var iv=setInterval(function(){cur+=step;if(cur>=t){cur=t;clearInterval(iv);}c.textContent=cur+suffix;},40);});
+        }
         var counters=document.querySelectorAll('.stat-number[data-count]'),cd=false;
-        var co=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting&&!cd){cd=true;counters.forEach(function(c){var t=parseInt(c.getAttribute('data-count'),10),cur=0,step=Math.max(1,Math.floor(t/40));var iv=setInterval(function(){cur+=step;if(cur>=t){cur=t;clearInterval(iv);}c.textContent=cur+'+';},40);});}});},{threshold:0.5});
+        var co=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting&&!cd){cd=true;animateCounters(counters,'+');}});},{threshold:0.5});
         counters.forEach(function(c){co.observe(c);});
+        var cmCounters=document.querySelectorAll('.cm-count[data-count]'),cmDone=false;
+        var cmObs=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting&&!cmDone){cmDone=true;animateCounters(cmCounters,'K');}});},{threshold:0.5});
+        cmCounters.forEach(function(c){cmObs.observe(c);});
         var stb=document.getElementById('scrollTop');
         window.addEventListener('scroll',function(){if(window.scrollY>600)stb.classList.add('visible');else stb.classList.remove('visible');},{passive:true});
         stb.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
