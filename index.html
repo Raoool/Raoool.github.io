@@ -129,6 +129,58 @@
         }
         @keyframes spin-ring { to { transform: rotate(360deg); } }
         .hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+        .orbit-ring {
+            position: absolute;
+            border: 1px dashed rgba(59, 130, 246, 0.15);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .orbit-ring-1 {
+            width: 500px; height: 500px;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%) rotateX(65deg);
+            animation: orbit-tilt-1 20s linear infinite;
+        }
+        .orbit-ring-2 {
+            width: 620px; height: 620px;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%) rotateX(55deg) rotateZ(40deg);
+            animation: orbit-tilt-2 28s linear infinite;
+        }
+        .satellite {
+            position: absolute;
+            font-size: 0.85rem;
+            filter: drop-shadow(0 0 6px var(--accent-glow));
+        }
+        .orbit-ring-1 .satellite {
+            top: -6px; left: 50%;
+            animation: sat-move 20s linear infinite;
+        }
+        .orbit-ring-2 .satellite {
+            top: -6px; left: 50%;
+            animation: sat-move 28s linear infinite reverse;
+        }
+        @keyframes orbit-tilt-1 {
+            from { transform: translate(-50%, -50%) rotateX(65deg) rotateZ(0deg); }
+            to   { transform: translate(-50%, -50%) rotateX(65deg) rotateZ(360deg); }
+        }
+        @keyframes orbit-tilt-2 {
+            from { transform: translate(-50%, -50%) rotateX(55deg) rotateZ(40deg); }
+            to   { transform: translate(-50%, -50%) rotateX(55deg) rotateZ(400deg); }
+        }
+        @keyframes sat-move {
+            from { offset-distance: 0%; }
+            to   { offset-distance: 100%; }
+        }
+        .hero-orbits {
+            position: absolute;
+            width: 100%; height: 100%;
+            top: 0; left: 0;
+            pointer-events: none;
+            z-index: 1;
+            perspective: 800px;
+        }
         .hero h1 {
             font-size: 3rem; font-weight: 700; margin-bottom: 8px;
             background: linear-gradient(135deg, var(--text-primary), var(--accent));
@@ -326,13 +378,17 @@
             <div class="particle"></div><div class="particle"></div><div class="particle"></div>
             <div class="particle"></div><div class="particle"></div>
         </div>
+        <div class="hero-orbits">
+            <div class="orbit-ring orbit-ring-1"><span class="satellite"><i class="fas fa-satellite" style="color:var(--accent);"></i></span></div>
+            <div class="orbit-ring orbit-ring-2"><span class="satellite"><i class="fas fa-satellite" style="color:var(--accent-hover);"></i></span></div>
+        </div>
         <div class="hero-content">
             <div class="hero-photo">
                 <img src="Image/Personal.jpg" alt="Rahul Shah">
             </div>
             <h1>Rahul Kumar Shah</h1>
             <p class="hero-subtitle">Research Scientist</p>
-            <p class="hero-quote" style="font-style:italic;color:var(--text-secondary);font-size:1.05rem;max-width:600px;margin:0 auto 20px;opacity:0.85;">"The people who are crazy enough to think they can change the world are the ones who do." <span style="font-style:normal;color:var(--text-muted);font-size:0.9rem;">&mdash; Steve Jobs</span></p>
+            <p class="hero-quote" style="font-style:italic;color:var(--text-secondary);font-size:1.05rem;max-width:600px;margin:12px auto 32px;opacity:0.85;">"The people who are crazy enough to think they can change the world are the ones who do." <span style="font-style:normal;color:var(--text-muted);font-size:0.9rem;">&mdash; Steve Jobs</span></p>
             <p class="hero-contact">Perrysburg, OH &nbsp;|&nbsp; (575) 339-7948 &nbsp;|&nbsp; rahul.shah12k@gmail.com &nbsp;|&nbsp; <a href="https://linkedin.com/in/rahul-shah12k" target="_blank">LinkedIn</a></p>
             <a href="#contact" class="hero-cta">Get in Touch</a>
             <div class="hero-stats">
